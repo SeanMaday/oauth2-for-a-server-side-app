@@ -1,0 +1,17 @@
+application: oauth2-for-a-server-side-app
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+ - url: /oauth2authorize
+   script: my_oauth_requester.py
+
+ - url: /oauth2callback
+   script: my_oauth_callback.py
+
+ - url: /oauth2revoke
+   script: my_oauth_revoke.py
+
+ - url: .*
+   script: main.py
